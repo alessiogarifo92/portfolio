@@ -1,6 +1,6 @@
 # Portfolio — Alessio Garifo
 
-Sito statico (HTML/CSS/JS, nessuna build). Tutti i contenuti stanno in `content.js`:
+Sito statico (HTML/CSS/JS, nessuna build), bilingue EN/IT. Tutti i contenuti stanno in `content.js` (oggetti `en` e `it`):
 le sezioni vuote vengono nascoste automaticamente.
 
 - Anteprima locale: `cd /home/user/portfolio && python3 -m http.server 8000`
