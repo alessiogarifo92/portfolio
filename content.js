@@ -13,30 +13,35 @@ window.PORTFOLIO = {
       about: "About", skills: "Skills", experience: "Experience", earlier: "Earlier career", projects: "Projects",
       education: "Education", certifications: "Certifications", languages: "Languages",
       cv: "Download CV (PDF)", fullscreen: "Full screen", closeDemo: "■ Close demo", demo: "Live demo",
-      apk: "Download APK", code: "Code on GitHub", theme: "Theme", switchLang: "IT", switchLabel: "Leggi in italiano"
+      apk: "Download APK", code: "Code on GitHub", theme: "Theme", switchLang: "IT", switchLabel: "Leggi in italiano", contact: "Contact", builtWith: "Hand-built with HTML, CSS and JavaScript — no framework, no tracking."
     },
     role: "Full-Stack Software Developer",
     location: "Amsterdam, Netherlands",
     tagline: "PHP, Laravel and Vue.js: robust, maintainable web applications from concept to production on Google Cloud, with hands-on technical support and AI built into the workflow.",
     about: [
-      "Full-stack developer with 5 years of professional experience building scalable, maintainable web applications in PHP and JavaScript. I work across the backend (Laravel, REST APIs, database design) and the frontend (Vue.js, UI components), taking projects from the initial concept to deployment in production.",
-      "Alongside development I handle technical support: bug reports, incidents and user issues through ticketing systems, with problem analysis, reproduction, root-cause identification and fixes, while keeping communication clear with users and internal teams. I'm comfortable working with SLAs, priorities and escalation paths.",
-      "In my daily workflow I use AI coding assistants and agent-based tools to speed up development and improve code quality, and I design AI-powered features (smart search, content suggestions, workflow automation) with attention to reliability, performance and well-structured prompts and APIs.",
-      "Open to new opportunities: a full-stack role, modernising an existing PHP application, strengthening technical support through structured ticket management, or exploring how AI can enhance your product."
+      "I'm a full-stack developer with 5 years of professional experience building scalable, maintainable web applications in PHP and JavaScript — Laravel and REST APIs on the backend, Vue.js on the frontend — and taking them from the first idea to production.",
+      "Today at Flexpedia I evolve a large legacy business platform and work daily with Google Cloud. Development and support go hand in hand there: I reproduce issues, find the root cause, ship the fix and keep users and teammates in the loop.",
+      "AI is part of how I work: coding assistants and agents speed up my development, and I design AI-powered features with the same care for reliability and performance as any other code."
     ],
-    stats: [
-      { value: "5", label: "years as a developer" },
-      { value: "6", label: "side projects" },
-      { value: "2", label: "Android apps (APK)" }
+    facts: [
+      { icon: "pin", text: "Based in Amsterdam" },
+      { icon: "briefcase", text: "Full Stack Developer at Flexpedia since 2024" },
+      { icon: "clock", text: "5 years of professional development" },
+      { icon: "spark", text: "Open to new opportunities", live: true }
     ],
-    skills: {
-      "Backend": ["PHP", "Laravel", "REST APIs", "MVC", "OOP", "Database design", "Third-party integrations"],
-      "Frontend": ["Vue.js", "JavaScript", "TypeScript", "HTML", "CSS / SASS", "Tailwind", "Bootstrap"],
-      "Databases": ["MySQL", "PostgreSQL", "SQLite"],
-      "Cloud & Infrastructure": ["Google Cloud Platform", "Linux / Ubuntu", "VMware vSphere", "Docker", "GitHub Actions"],
-      "AI": ["AI coding assistants & agents", "AI-powered features", "Prompt design & API integration"],
-      "Support & Process": ["Ticketing & incident resolution", "Root-cause analysis", "SLAs & escalation", "Git"]
+    contact: {
+      title: "Let's build something together",
+      text: "Looking for a full-stack developer, someone to modernise an existing PHP application, strengthen technical support, or explore how AI can improve your product? I'd be glad to talk.",
+      email: "Write me an email"
     },
+    skills: [
+      { icon: "server", title: "Backend", desc: "Laravel applications, REST APIs and database design that stay maintainable as they grow.", items: ["PHP", "Laravel", "REST APIs", "MVC", "OOP", "Third-party integrations"] },
+      { icon: "layout", title: "Frontend", desc: "Clean, component-based interfaces with Vue.js.", items: ["Vue.js", "JavaScript", "TypeScript", "HTML", "CSS / SASS", "Tailwind"] },
+      { icon: "database", title: "Data", desc: "Schemas, queries and performance tuning.", items: ["MySQL", "PostgreSQL", "SQLite"] },
+      { icon: "cloud", title: "Cloud & DevOps", desc: "From the repository to production on Google Cloud and Linux servers.", items: ["Google Cloud Platform", "Linux / Ubuntu", "VMware vSphere", "Docker", "GitHub Actions", "Git"] },
+      { icon: "lifebuoy", title: "Support", desc: "Ticket triage, reproduction, root-cause analysis and clear communication.", items: ["Ticketing", "Incident resolution", "SLAs & escalation"] },
+      { icon: "spark", title: "AI", desc: "AI assistants and agents in the daily workflow, AI-powered features in products.", items: ["Coding assistants & agents", "Smart search & suggestions", "Prompt & API design"] }
+    ],
     experience: [
       {
         company: "Flexpedia", title: "Full Stack Developer", period: "Feb 2024 – present · Haarlem",
@@ -171,30 +176,35 @@ window.PORTFOLIO = {
       about: "Chi sono", skills: "Competenze", experience: "Esperienza", earlier: "Percorso precedente", projects: "Progetti",
       education: "Formazione", certifications: "Certificazioni", languages: "Lingue",
       cv: "Scarica CV (PDF)", fullscreen: "Schermo intero", closeDemo: "■ Chiudi demo", demo: "Demo live",
-      apk: "Scarica APK", code: "Codice su GitHub", theme: "Tema", switchLang: "EN", switchLabel: "Read in English"
+      apk: "Scarica APK", code: "Codice su GitHub", theme: "Tema", switchLang: "EN", switchLabel: "Read in English", contact: "Contatti", builtWith: "Scritto a mano in HTML, CSS e JavaScript — nessun framework, nessun tracciamento."
     },
     role: "Full-Stack Software Developer",
     location: "Amsterdam, Paesi Bassi",
     tagline: "PHP, Laravel e Vue.js: applicazioni web robuste e manutenibili, dal concept alla produzione su Google Cloud, con supporto tecnico e AI integrata nel flusso di lavoro.",
     about: [
-      "Sviluppatore full stack con 5 anni di esperienza professionale nella costruzione di applicazioni web scalabili e manutenibili in PHP e JavaScript. Lavoro sul backend (Laravel, REST API, database design) e sul frontend (Vue.js, componenti UI), seguendo i progetti dall'idea iniziale al rilascio in produzione.",
-      "Affianco allo sviluppo il supporto tecnico: gestisco bug, incidenti e richieste degli utenti tramite ticketing, con analisi del problema, riproduzione, individuazione della causa e fix, comunicando in modo chiaro con utenti e team. Sono a mio agio con SLA, priorità e percorsi di escalation.",
-      "Uso quotidianamente assistenti di coding e strumenti ad agenti per accelerare lo sviluppo e migliorare la qualità del codice, e progetto funzionalità basate su AI (ricerca intelligente, suggerimenti di contenuti, automazione di workflow) con attenzione ad affidabilità, performance e prompt ben strutturati.",
-      "Sono aperto a nuove opportunità: un ruolo full stack, modernizzare un'applicazione PHP esistente, rafforzare il supporto tecnico con una gestione strutturata dei ticket, o esplorare come l'AI può migliorare il tuo prodotto."
+      "Sono uno sviluppatore full stack con 5 anni di esperienza professionale nella costruzione di applicazioni web scalabili e manutenibili in PHP e JavaScript — Laravel e REST API sul backend, Vue.js sul frontend — seguendole dall'idea iniziale alla produzione.",
+      "Oggi in Flexpedia faccio evolvere una grande piattaforma di business legacy e lavoro ogni giorno con Google Cloud. Lì sviluppo e supporto vanno di pari passo: riproduco i problemi, trovo la causa, rilascio il fix e tengo aggiornati utenti e colleghi.",
+      "L'AI fa parte del mio modo di lavorare: assistenti di coding e agenti accelerano lo sviluppo, e progetto funzionalità basate su AI con la stessa attenzione ad affidabilità e prestazioni di qualsiasi altro codice."
     ],
-    stats: [
-      { value: "5", label: "anni da sviluppatore" },
-      { value: "6", label: "progetti personali" },
-      { value: "2", label: "app Android (APK)" }
+    facts: [
+      { icon: "pin", text: "Vivo ad Amsterdam" },
+      { icon: "briefcase", text: "Full Stack Developer in Flexpedia dal 2024" },
+      { icon: "clock", text: "5 anni di sviluppo professionale" },
+      { icon: "spark", text: "Aperto a nuove opportunità", live: true }
     ],
-    skills: {
-      "Backend": ["PHP", "Laravel", "REST API", "MVC", "OOP", "Database design", "Integrazioni di terze parti"],
-      "Frontend": ["Vue.js", "JavaScript", "TypeScript", "HTML", "CSS / SASS", "Tailwind", "Bootstrap"],
-      "Database": ["MySQL", "PostgreSQL", "SQLite"],
-      "Cloud & Infrastruttura": ["Google Cloud Platform", "Linux / Ubuntu", "VMware vSphere", "Docker", "GitHub Actions"],
-      "AI": ["Assistenti di coding e agenti", "Funzionalità AI-powered", "Prompt design e integrazione API"],
-      "Supporto & Processo": ["Ticketing e risoluzione incidenti", "Root cause analysis", "SLA ed escalation", "Git"]
+    contact: {
+      title: "Costruiamo qualcosa insieme",
+      text: "Cerchi uno sviluppatore full stack, qualcuno che modernizzi un'applicazione PHP esistente, rafforzi il supporto tecnico o esplori come l'AI può migliorare il tuo prodotto? Parliamone.",
+      email: "Scrivimi un'email"
     },
+    skills: [
+      { icon: "server", title: "Backend", desc: "Applicazioni Laravel, REST API e database design che restano manutenibili mentre crescono.", items: ["PHP", "Laravel", "REST API", "MVC", "OOP", "Integrazioni di terze parti"] },
+      { icon: "layout", title: "Frontend", desc: "Interfacce pulite e a componenti con Vue.js.", items: ["Vue.js", "JavaScript", "TypeScript", "HTML", "CSS / SASS", "Tailwind"] },
+      { icon: "database", title: "Dati", desc: "Schemi, query e ottimizzazione delle prestazioni.", items: ["MySQL", "PostgreSQL", "SQLite"] },
+      { icon: "cloud", title: "Cloud & DevOps", desc: "Dal repository alla produzione su Google Cloud e server Linux.", items: ["Google Cloud Platform", "Linux / Ubuntu", "VMware vSphere", "Docker", "GitHub Actions", "Git"] },
+      { icon: "lifebuoy", title: "Supporto", desc: "Triage dei ticket, riproduzione, analisi della causa e comunicazione chiara.", items: ["Ticketing", "Risoluzione incidenti", "SLA ed escalation"] },
+      { icon: "spark", title: "AI", desc: "Assistenti e agenti AI nel lavoro quotidiano, funzionalità AI nei prodotti.", items: ["Assistenti di coding e agenti", "Ricerca e suggerimenti intelligenti", "Prompt e API design"] }
+    ],
     experience: [
       {
         company: "Flexpedia", title: "Full Stack Developer", period: "Feb 2024 – oggi · Haarlem",
