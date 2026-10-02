@@ -4,7 +4,7 @@ Sito statico (HTML/CSS/JS, nessuna build). Tutti i contenuti stanno in `content.
 le sezioni vuote vengono nascoste automaticamente.
 
 - Anteprima locale: `cd /home/user/portfolio && python3 -m http.server 8000`
-- Deploy: GitHub Pages (Settings → Pages → branch `main`, root).
+- Deploy: workflow `.github/workflows/pages.yml` (push su `main`). Una tantum: Settings → Pages → Source = GitHub Actions.
 - I TODO sono stati compilati dal PDF LinkedIn; aggiungi `projects` e `certifications` quando vuoi.
 - "Scarica CV (PDF)" usa la stampa del browser (CSS `@media print`).
 
