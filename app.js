@@ -68,7 +68,12 @@
     }).join("");
 
     var sections = [];
-    if (has(d.about)) sections.push(["about", u.about, '<div class="about">' + d.about.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>"]);
+    if (has(d.about)) {
+      var langs = has(d.languages) ? '<aside class="langs glass"><h3>' + esc(u.languages) + "</h3><ul>" + d.languages.map(function (l) {
+        return '<li><span class="lcode">' + esc(l.code) + '</span><div><b>' + esc(l.name) + "</b><small>" + esc(l.level) + '</small></div></li>';
+      }).join("") + "</ul></aside>" : "";
+      sections.push(["about", u.about, '<div class="about-wrap"><div class="about">' + d.about.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" + langs + "</div>"]);
+    }
     if (has(d.skills)) sections.push(["skills", u.skills, '<div class="bento">' + d.skills.map(function (s) {
       return '<div class="tile glass"><i class="ico tile-ico">' + I[s.icon] + "</i><h3>" + esc(s.title) + "</h3><p>" + esc(s.desc) + '</p><ul class="chips">' +
         s.items.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
@@ -103,7 +108,6 @@
       return '<li class="glass"><span class="when">' + esc(e.period || "") + "</span><b>" + esc(e.degree) + "</b><span>" + esc(e.school) + "</span></li>";
     }).join("") + "</ul>"]);
     if (has(d.certifications)) sections.push(["certifications", u.certifications, '<ul class="plain">' + d.certifications.map(function (c) { return "<li>" + esc(typeof c === "string" ? c : c.name) + "</li>"; }).join("") + "</ul>"]);
-    if (has(d.languages)) sections.push(["languages", u.languages, '<ul class="plain">' + d.languages.map(function (l) { return "<li><b>" + esc(l.name) + "</b> — " + esc(l.level) + "</li>"; }).join("") + "</ul>"]);
     if (d.contact) sections.push(["contact", u.contact, '<div class="contact glass"><h3>' + esc(d.contact.title) + "</h3><p>" + esc(d.contact.text) + '</p><div class="cta">' +
       btn({ href: "mailto:" + P.links.email, icon: "mail", tone: "t-mail", label: d.contact.email }) + contactButtons().slice(0, 2).join("") + "</div></div>"]);
 

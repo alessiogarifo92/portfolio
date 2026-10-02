@@ -88,6 +88,12 @@ h3{margin:0 0 8px;font-size:1.12rem}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
 
 .about{max-width:72ch;font-size:1.08rem;color:var(--mut)}.about p:first-child{color:var(--fg)}
+.about-wrap{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.langs{padding:22px}.langs h3{font-size:.8rem;font-family:"JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--a2);margin:0 0 16px}
+.langs ul{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+.langs li{display:flex;gap:14px;align-items:flex-start}.langs li>div{flex:1}
+.lcode{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;font:600 .8rem "JetBrains Mono",monospace}
+.langs b{display:block;font-weight:600}.langs small{display:block;color:var(--mut);font-size:.84rem;line-height:1.4;margin-top:2px}
 
 .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .tile{padding:22px;transition:border-color .25s,transform .25s}
@@ -152,7 +158,8 @@ dialog::backdrop{background:rgba(5,6,10,.8);backdrop-filter:blur(4px)}
   .hero{grid-template-columns:1fr;min-height:0;gap:40px;padding-top:48px}
   .code{transform:none}
   .bento{grid-template-columns:1fr 1fr}
-  .edu{grid-template-columns:1fr}}
+  .edu{grid-template-columns:1fr}
+  .about-wrap{grid-template-columns:1fr;gap:24px}}
 @media(max-width:600px){
   .facts{grid-template-columns:1fr}
   .bento{grid-template-columns:1fr}

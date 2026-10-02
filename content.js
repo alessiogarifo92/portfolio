@@ -168,7 +168,10 @@ window.PORTFOLIO = {
       { school: "ISIS Gramsci-Keynes, Prato", degree: "Surveying / Geometric analysis", period: "2006 – 2011" }
     ],
     certifications: [],
-    languages: []
+    languages: [
+      { code: "IT", name: "Italian", level: "Native" },
+      { code: "EN", name: "English", level: "Professional working proficiency" }
+    ]
   },
 
   it: {
@@ -331,6 +334,9 @@ window.PORTFOLIO = {
       { school: "ISIS Gramsci-Keynes, Prato", degree: "Geometria / Analisi geometrica", period: "2006 – 2011" }
     ],
     certifications: [],
-    languages: []
+    languages: [
+      { code: "IT", name: "Italiano", level: "Madrelingua" },
+      { code: "EN", name: "Inglese", level: "Competenza professionale" }
+    ]
   }
 };
