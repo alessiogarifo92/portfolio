@@ -30,7 +30,10 @@
   if (has(d.experience)) sections.push(["experience", "Esperienza", '<ol class="timeline">' + d.experience.map(function (e) {
     var b = (e.bullets || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
     var period = /^TODO/.test(e.period || "") ? "" : e.period || "";
-    return '<li><div class="when">' + esc(period) + '</div><div><h3>' + esc(e.title) + ' · ' + esc(e.company) + '</h3>' + (b ? "<ul>" + b + "</ul>" : "") + "</div></li>";
+    return '<li><div class="when">' + esc(period) + '</div><div><h3>' + esc(e.title) + ' · ' + esc(e.company) + '</h3>' + (e.summary ? "<p>" + esc(e.summary) + "</p>" : "") + (b ? "<ul>" + b + "</ul>" : "") + "</div></li>";
+  }).join("") + "</ol>"]);
+  if (has(d.earlier)) sections.push(["earlier", "Percorso precedente", '<ol class="timeline">' + d.earlier.map(function (e) {
+    return '<li><div class="when">' + esc(e.period) + '</div><div>' + esc(e.text) + "</div></li>";
   }).join("") + "</ol>"]);
   if (has(d.projects)) sections.push(["projects", "Progetti", '<div class="cards">' + d.projects.map(function (p) {
     var links = (p.url ? '<a href="' + p.url + '" rel="noopener">Demo</a> ' : "") + (p.repo ? '<a href="' + p.repo + '" rel="noopener">Codice</a>' : "");
