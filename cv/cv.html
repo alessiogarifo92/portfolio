@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alessio Garifo - Full-Stack Software Developer CV</title>
+<meta name="author" content="Alessio Garifo">
+<!-- ATS-friendly CV: one column, standard section headings, real text, no tables, icons or images.
+     Rendered to assets/Alessio_Garifo_CV.pdf by scripts/build-cv.js. -->
+<style>
+  @page { size: A4; margin: 15mm 16mm 14mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 9.6pt; line-height: 1.38; color: #1a1a1a; }
+  a { color: #1f4e79; text-decoration: none; }
+  h1 { font-size: 21pt; line-height: 1.1; margin: 0; color: #1f4e79; letter-spacing: -.2pt; }
+  .headline { font-size: 11pt; margin: 3pt 0 4pt; }
+  .contact { font-size: 9pt; color: #444; margin: 0; }
+  .contact span { white-space: nowrap; }
+  .contact span + span::before { content: " | "; color: #888; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .6pt; color: #1f4e79; border-bottom: 1px solid #1f4e79; padding-bottom: 2pt; margin: 12pt 0 6pt; break-after: avoid; }
+  p { margin: 0 0 4pt; }
+  ul { margin: 2pt 0 0; padding-left: 13pt; }
+  li { margin: 0 0 1.6pt; }
+  .skills p { margin: 0 0 2.5pt; }
+  .job { margin: 0 0 7pt; break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; gap: 12pt; align-items: baseline; }
+  .row .date { white-space: nowrap; color: #555; font-size: 9pt; }
+  .stack { color: #444; font-size: 9pt; margin-top: 1pt; }
+  .proj { margin: 0 0 5pt; break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<h1>Alessio Garifo</h1>
+<p class="headline">Full-Stack Software Developer | PHP, Laravel, Vue.js, MySQL, Google Cloud</p>
+<p class="contact"><span>Amsterdam, Netherlands</span><span><a href="mailto:alessiogarifo92@gmail.com">alessiogarifo92@gmail.com</a></span><span>Portfolio: <a href="https://alessiogarifo92.github.io/portfolio/">alessiogarifo92.github.io/portfolio</a></span></p>
+<p class="contact"><span>LinkedIn: <a href="https://www.linkedin.com/in/alessio-garifo-a89697128/">linkedin.com/in/alessio-garifo-a89697128</a></span><span>GitHub: <a href="https://github.com/alessiogarifo92">github.com/alessiogarifo92</a></span></p>
+
+<h2>Summary</h2>
+<p>Full-Stack Developer with 5 years of experience building and maintaining production web applications with PHP/Laravel, Vue.js and MySQL on Google Cloud. Strong in REST API design, third-party integrations, legacy modernization and ticket-driven troubleshooting, with hands-on use of AI coding assistants and AI agent workflows.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><b>Backend:</b> PHP, Laravel, RESTful APIs, OOP, MVC architecture, third-party API integrations</p>
+  <p><b>Frontend:</b> Vue.js, JavaScript (ES6+), TypeScript, HTML5, CSS3 / SASS, Tailwind CSS, Bootstrap, jQuery</p>
+  <p><b>Databases:</b> MySQL, PostgreSQL, SQLite, database design, query optimization, caching / buffering strategies</p>
+  <p><b>Cloud &amp; DevOps:</b> Google Cloud Platform (GCP), Linux (Ubuntu), Git, GitHub Actions (CI/CD), VMware vSphere, Docker; Kubernetes (in progress)</p>
+  <p><b>AI &amp; Automation:</b> AI coding assistants (Claude Code), agent-based workflows, MCP integrations, LLM API integration, prompt design</p>
+  <p><b>Practices:</b> Issue-driven development, debugging and root-cause analysis, refactoring, automated testing, technical support, SLA-based ticketing</p>
+</div>
+
+<h2>Professional Experience</h2>
+<div class="job">
+  <div class="row"><span><b>Full Stack Developer</b> | Flexpedia, Haarlem, Netherlands</span><span class="date">02/2024 - Present</span></div>
+  <ul>
+    <li>Develop and maintain a large legacy business platform across backend (PHP/Laravel) and frontend (Vue.js), improving stability and reliability.</li>
+    <li>Build and maintain third-party integrations and REST APIs connecting the platform to external services.</li>
+    <li>Resolve support tickets end to end: bug reproduction, root-cause analysis, fixes and direct communication with users.</li>
+    <li>Monitor and operate production infrastructure on Google Cloud Platform (GCP).</li>
+    <li>Contribute to the project's AI transition and drive automation and process-optimization initiatives.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="row"><span><b>Back End Developer</b> | Massimi Sistemi, Siena, Italy</span><span class="date">06/2021 - 09/2023</span></div>
+  <ul>
+    <li>Took part in the full lifecycle (analysis, testing, implementation) of trust domain features, delivered to client satisfaction.</li>
+    <li>Built buffering systems that improved database read performance and data-retrieval speed.</li>
+    <li>Optimized existing code to reduce load times and fixed bugs, improving overall system stability.</li>
+    <li>Wrote reusable, clean and readable code, making future changes faster and safer.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="row"><span><b>Full Stack Web Developer Trainee</b> | Boolean Careers, Milan, Italy</span><span class="date">09/2020 - 03/2021</span></div>
+  <ul>
+    <li>Intensive 6-month full-time bootcamp with daily hands-on projects: HTML, CSS/SASS, Bootstrap, JavaScript (jQuery, Vue.js), PHP and OOP, MySQL, Laravel.</li>
+  </ul>
+</div>
+
+<h2>Selected Projects</h2>
+<div class="proj">
+  <p><b>Tisane Match</b> - Web app and offline Android app (personal project)</p>
+  <ul>
+    <li>Taste-based recommender for 156 shelf products: a 5-step quiz builds a 12-note taste profile and every product gets an explained match score.</li>
+    <li>Email and Google login (Socialite), reviews, admin panel; deployed on Render with Postgres (Neon); CI tests on SQLite and Postgres; Android APK with NativePHP built in GitHub Actions.</li>
+  </ul>
+  <p class="stack">Laravel 13, PHP 8.4, Blade, Tailwind CSS, SQLite, PostgreSQL, NativePHP, GitHub Actions, Docker</p>
+</div>
+<div class="proj">
+  <p><b>Mix &amp; Splash</b> - Mobile puzzle game for Android and web (personal project, playable demo on the portfolio)</p>
+  <ul>
+    <li>100 levels in 10 themed stages, each with a solution verified in simulation; levels generated and checked in CI.</li>
+    <li>Unit tests with Vitest and end-to-end tests with Playwright; Android build with Capacitor.</li>
+  </ul>
+  <p class="stack">TypeScript, Phaser, Vite, Capacitor, PWA, Vitest, Playwright</p>
+</div>
+<div class="proj">
+  <p><b>PS Plus Catalog</b> - Full-stack catalogue web app (personal project)</p>
+  <ul>
+    <li>FastAPI REST API with PostgreSQL and a scheduled sync worker (retries with backoff, sync logs, last-good-data fallback); Nuxt 3 frontend in 10 languages; Docker Compose environment.</li>
+  </ul>
+  <p class="stack">Python, FastAPI, PostgreSQL, SQLAlchemy, Nuxt 3, Vue, Tailwind CSS, Docker</p>
+</div>
+<div class="proj">
+  <p><b>Telegram Jobs Bot</b> - Job-alert automation (personal project)</p>
+  <ul>
+    <li>Pushes new Laravel/PHP openings from 6 official APIs and RSS feeds to Telegram, with deduplication; serverless on two GitHub Actions schedules sized to each source's rate limits.</li>
+  </ul>
+  <p class="stack">Python, Telegram Bot API, GitHub Actions, REST, RSS, pytest</p>
+</div>
+
+<h2>Earlier Experience</h2>
+<p><b>Customer Care &amp; Banking Back Office Clerk</b> | GFT Technologies, Florence, Italy | 03/2013 - 07/2015: credit-card customer support and payment processing on AS400 systems.</p>
+<p><b>International roles in hospitality, wine production and sales</b> | Italy, UK and Australia | 07/2015 - 03/2020: including team leader managing a team of 6; customer-facing, quality-control and operational roles.</p>
+
+<h2>Education</h2>
+<p><b>Certificate, Full Stack Web Development (full-time bootcamp)</b> | Boolean, Milan, Italy | 09/2020 - 03/2021</p>
+<p><b>Technical High School Diploma in Surveying</b> | ISIS Gramsci-Keynes, Prato, Italy | 09/2006 - 07/2011</p>
+
+<h2>Languages</h2>
+<p>Italian (native), English (professional working proficiency)</p>
+
+</body>
+</html>

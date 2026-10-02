@@ -62,7 +62,7 @@
     $("footer").textContent = "© " + new Date().getFullYear() + " " + P.name;
     $("built").textContent = u.builtWith;
 
-    $("cta").innerHTML = contactButtons().concat(btn({ icon: "download", tone: "t-accent", label: u.cv, data: ' data-print="1"' })).join("");
+    $("cta").innerHTML = contactButtons().concat(btn({ href: P.cv, icon: "download", tone: "t-accent", label: u.cv, data: ' download="Alessio_Garifo_CV.pdf" type="application/pdf"' })).join("");
     $("facts").innerHTML = (d.facts || []).map(function (f) {
       return "<li" + (f.live ? ' class="live"' : "") + '><i class="ico">' + (f.live ? '<b class="dot"></b>' : I[f.icon]) + "</i>" + esc(f.text) + "</li>";
     }).join("");
@@ -154,7 +154,6 @@
 
   document.addEventListener("click", function (e) {
     var t = e.target.nodeType === 1 ? e.target : e.target.parentElement;
-    if (t.closest("[data-print]")) { window.print(); return; }
     var shot = t.closest(".shot");
     if (shot) {
       $("lb-img").src = shot.dataset.src; $("lb-img").alt = shot.dataset.alt;

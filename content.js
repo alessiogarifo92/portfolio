@@ -2,6 +2,7 @@
 // Fonti: profilo LinkedIn (PDF) e README/codice dei repository dei progetti. Nulla di inventato.
 window.PORTFOLIO = {
   name: "Alessio Garifo",
+  cv: "assets/Alessio_Garifo_CV.pdf", // ATS-friendly PDF built from cv/cv.html (node scripts/build-cv.js)
   links: {
     github: "https://github.com/alessiogarifo92",
     linkedin: "https://www.linkedin.com/in/alessio-garifo-a89697128/",
@@ -178,7 +179,7 @@ window.PORTFOLIO = {
     ui: {
       about: "Chi sono", skills: "Competenze", experience: "Esperienza", earlier: "Percorso precedente", projects: "Progetti",
       education: "Formazione", certifications: "Certificazioni", languages: "Lingue",
-      cv: "Scarica CV (PDF)", fullscreen: "Schermo intero", closeDemo: "■ Chiudi demo", demo: "Demo live",
+      cv: "Scarica CV (PDF, EN)", fullscreen: "Schermo intero", closeDemo: "■ Chiudi demo", demo: "Demo live",
       apk: "Scarica APK", code: "Codice su GitHub", theme: "Tema", switchLang: "EN", switchLabel: "Read in English", contact: "Contatti", builtWith: "Scritto a mano in HTML, CSS e JavaScript — nessun framework, nessun tracciamento."
     },
     role: "Full-Stack Software Developer",
