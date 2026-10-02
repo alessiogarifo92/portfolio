@@ -35,10 +35,19 @@
   if (has(d.earlier)) sections.push(["earlier", "Percorso precedente", '<ol class="timeline">' + d.earlier.map(function (e) {
     return '<li><div class="when">' + esc(e.period) + '</div><div>' + esc(e.text) + "</div></li>";
   }).join("") + "</ol>"]);
-  if (has(d.projects)) sections.push(["projects", "Progetti", '<div class="cards">' + d.projects.map(function (p) {
-    var links = (p.url ? '<a href="' + p.url + '" rel="noopener">Demo</a> ' : "") + (p.repo ? '<a href="' + p.repo + '" rel="noopener">Codice</a>' : "");
-    return '<article class="card"><h3>' + esc(p.name) + '</h3><p>' + esc(p.description) + '</p><ul class="chips">' +
-      (p.stack || []).map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul><div class=\"links\">" + links + "</div></article>";
+  if (has(d.projects)) sections.push(["projects", "Progetti", '<div class="projects">' + d.projects.map(function (p, i) {
+    var media = (p.media || []).map(function (m) {
+      return '<button class="shot" data-src="' + m.src + '" data-alt="' + esc(m.alt) + '"><img loading="lazy" src="' + m.src + '" alt="' + esc(m.alt) + '"></button>';
+    }).join("");
+    var actions = (p.demo ? '<button class="btn primary" data-demo="' + i + '">▶ ' + esc(p.demo.label) + '</button> <a class="btn" href="' + p.demo.src + '" target="_blank" rel="noopener">Schermo intero</a> ' : "") +
+      (p.url ? '<a class="btn primary" href="' + p.url + '" rel="noopener">Demo</a> ' : "") +
+      (p.apk ? '<a class="btn" href="' + p.apk + '" rel="noopener">Scarica APK</a> ' : "") +
+      (p.repo ? '<a class="btn" href="' + p.repo + '" rel="noopener">Codice su GitHub</a>' : "");
+    return '<article class="project' + (p.featured ? " featured" : "") + '"><div class="ptext"><p class="kind">' + esc(p.kind || "") + '</p><h3>' + esc(p.name) + '</h3><p>' + esc(p.description) + '</p>' +
+      (p.highlights ? "<ul>" + p.highlights.map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>" : "") +
+      '<ul class="chips">' + (p.stack || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
+      (actions ? '<div class="actions">' + actions + "</div>" : "") + (p.note ? '<p class="note">' + esc(p.note) + "</p>" : "") + "</div>" +
+      (media ? '<div class="shots">' + media + "</div>" : "") + '<div class="demo-slot" id="demo-' + i + '"></div></article>';
   }).join("") + "</div>"]);
   if (has(d.education)) sections.push(["education", "Formazione", "<ul class=\"plain\">" + d.education.map(function (e) {
     return "<li><b>" + esc(e.degree) + "</b> — " + esc(e.school) + " <span>" + esc(e.period || "") + "</span></li>";
@@ -57,6 +66,23 @@
     }, { threshold: 0.08 });
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
   } else document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+
+  document.addEventListener("click", function (e) {
+    var shot = e.target.closest && e.target.closest(".shot");
+    if (shot) {
+      $("lb-img").src = shot.dataset.src; $("lb-img").alt = shot.dataset.alt;
+      if ($("lb").showModal) $("lb").showModal(); else $("lb").setAttribute("open", "");
+      return;
+    }
+    var demo = e.target.closest && e.target.closest("[data-demo]");
+    if (demo) {
+      var i = demo.dataset.demo, slot = $("demo-" + i), p = d.projects[i];
+      if (slot.firstChild) { slot.innerHTML = ""; demo.textContent = "▶ " + p.demo.label; return; }
+      slot.innerHTML = '<div class="phone"><iframe src="' + p.demo.src + '" title="' + esc(p.name) + '" allow="fullscreen"></iframe></div>';
+      demo.textContent = "■ Chiudi demo"; slot.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    if (e.target.id === "lb" || e.target.id === "lb-img") $("lb").close ? $("lb").close() : $("lb").removeAttribute("open");
+  });
 
   var root = document.documentElement;
   try { var t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}

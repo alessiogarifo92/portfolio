@@ -7,3 +7,8 @@ le sezioni vuote vengono nascoste automaticamente.
 - Deploy: GitHub Pages (Settings → Pages → branch `main`, root).
 - I TODO sono stati compilati dal PDF LinkedIn; aggiungi `projects` e `certifications` quando vuoi.
 - "Scarica CV (PDF)" usa la stampa del browser (CSS `@media print`).
+
+## Progetti e demo
+- Screenshot reali in `assets/projects/` (presi dalle evidenze di test dei repo, ridimensionati in WebP).
+- `demos/mix-and-splash/` è la build web statica di Mix & Splash (`npx vite build` nel repo del gioco, senza service worker), giocabile dal portfolio.
+- Per aggiungere un link live o un APK a un progetto: in `content.js` imposta `url` e/o `apk` su quel progetto, i pulsanti compaiono da soli.
