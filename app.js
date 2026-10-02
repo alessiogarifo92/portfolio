@@ -139,6 +139,13 @@
     try { localStorage.setItem("lang", lang); } catch (e) {}
     render();
   });
+  // Follow live OS/browser theme changes until the visitor picks a theme with the toggle.
+  var mq = window.matchMedia && matchMedia("(prefers-color-scheme: light)");
+  function saved() { try { var t = localStorage.getItem("theme"); return t === "light" || t === "dark" ? t : null; } catch (e) { return null; } }
+  if (mq) {
+    var onChange = function () { if (!saved()) { root.dataset.theme = mq.matches ? "light" : "dark"; themeIcon(); } };
+    if (mq.addEventListener) mq.addEventListener("change", onChange); else if (mq.addListener) mq.addListener(onChange);
+  }
   $("theme").addEventListener("click", function () {
     root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
     try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}

@@ -13,6 +13,14 @@
   --b1:rgba(124,92,255,.28);--b2:rgba(34,211,238,.26);--b3:rgba(244,114,182,.2);
   --grain:.05;--gridc:rgba(20,21,31,.06);--shadow:0 20px 50px -24px rgba(40,40,80,.25);
   --code-bg:rgba(18,20,32,.92);--t-github:#14151f;color-scheme:light}
+/* Without JavaScript, follow the OS preference */
+@media(prefers-color-scheme:light){:root:not([data-theme]){
+  --bg:#f6f6fb;--bg2:#ffffff;--fg:#14151f;--mut:#555b70;--dim:#7a8094;
+  --line:rgba(20,21,31,.1);--glass:rgba(255,255,255,.6);--glass-hi:rgba(255,255,255,.9);
+  --a1:#6246ea;--a2:#0891b2;--a3:#db2777;
+  --b1:rgba(124,92,255,.28);--b2:rgba(34,211,238,.26);--b3:rgba(244,114,182,.2);
+  --grain:.05;--gridc:rgba(20,21,31,.06);--shadow:0 20px 50px -24px rgba(40,40,80,.25);
+  --code-bg:rgba(18,20,32,.92);--t-github:#14151f;color-scheme:light}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--a2)}
