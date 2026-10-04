@@ -152,8 +152,12 @@
     themeIcon();
   });
 
+  // Count key actions as GoatCounter events (no-op if the script is blocked or not loaded yet).
+  function track(name) { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: name, event: true }); }
+
   document.addEventListener("click", function (e) {
     var t = e.target.nodeType === 1 ? e.target : e.target.parentElement;
+    if (t.closest('a[href="' + P.cv + '"]')) track("cv-download");
     var shot = t.closest(".shot");
     if (shot) {
       $("lb-img").src = shot.dataset.src; $("lb-img").alt = shot.dataset.alt;
@@ -168,6 +172,7 @@
         demo.innerHTML = '<i class="ico t-accent">' + I.play + "</i><span>" + esc(p.demo.label) + "</span>";
         return;
       }
+      track("demo-" + p.name);
       slot.innerHTML = '<div class="phone"><iframe src="' + p.demo.src + '" title="' + esc(p.name) + '" allow="fullscreen"></iframe></div>';
       demo.innerHTML = '<i class="ico t-accent">' + I.stop + "</i><span>" + esc(u.closeDemo.replace(/^■\s*/, "")) + "</span>";
       slot.scrollIntoView({ behavior: "smooth", block: "center" });
